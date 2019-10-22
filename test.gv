@@ -1,0 +1,13 @@
+digraph {
+	node [shape=box];
+	edge [dir=none];
+	Mothertest[label="Mothertest",style=filled,fillcolor=rosybrown1]
+	Childtest[label="Childtest",style=filled,fillcolor=rosybrown1]
+	Fathertest[label="Fathertest",style=filled,fillcolor=skyblue2]
+	{ rank=same Mothertest Fathertest } 
+ 	Mothertest -> Fathertest;
+	Mothertest -> Childtest;
+	{ rank=same Fathertest Mothertest } 
+ 	Fathertest -> Mothertest;
+	Fathertest -> Childtest;
+}
